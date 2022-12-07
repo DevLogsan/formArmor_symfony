@@ -24,7 +24,7 @@ class CustomAuthenticator extends AbstractFormLoginAuthenticator implements Pass
 {
     use TargetPathTrait;
 
-    public const LOGIN_ROUTE = 'app_login';
+    public const LOGIN_ROUTE = 'login_administrateur';
 
     private $entityManager;
     private $urlGenerator;
@@ -94,7 +94,7 @@ class CustomAuthenticator extends AbstractFormLoginAuthenticator implements Pass
         if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
             return new RedirectResponse($targetPath);
         }
-        return new RedirectResponse($this->urlGenerator->generate('accueil'));
+        return new RedirectResponse($this->urlGenerator->generate('security/accueil'));
     }
 
     protected function getLoginUrl()

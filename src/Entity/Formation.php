@@ -18,8 +18,7 @@ class Formation
     private $id;
 	
 	/**
-	* @ORM\OneToMany(targetEntity="App\Entity\Plan_formation",
-	mappedBy="formation")
+	* @ORM\OneToMany(targetEntity="App\Entity\Plan_formation", mappedBy="formation")
 	*/
 	private $plans; // Ici plans prend un « s », car une formation a plusieurs plans !
 	

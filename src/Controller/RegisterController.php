@@ -13,10 +13,15 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
 class RegisterController extends AbstractController
 {
     /**
     * @Route("/register", name="register")
+    *
+    * @Security("is_granted('ROLE_SUPER_ADMIN')")
     */
     public function register(Request $request, UserPasswordEncoderInterface $passEncoder)
     {
