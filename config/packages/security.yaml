@@ -15,11 +15,11 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
         main:
-            lazy: true
+            anonymous: lazy
             provider: app_user_provider
             guard:
-            authenticators:
-                - App\Security\CustomAuthenticator
+                authenticators:
+                    - App\Security\CustomAuthenticator
             logout:
                 path: deconnexion
                 # where to redirect after logout
