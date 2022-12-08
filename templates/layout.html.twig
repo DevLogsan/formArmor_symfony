@@ -44,6 +44,7 @@
                                                                 {% endif %}
 								<li id='menu4'><a href="{{ path('login_client') }}">Connexion client</a></li>
 								<li id='menu5'><a href="{{ path('login_administrateur') }}">Connexion administrateur</a></li>
+                                                                <li>{% if app.user %}Vous êtes connecté en tant que {{ app.user.username }}, <br><a href="{{ path('deconnexion') }}">Déconnexion</a>{% endif %}</li>
 							</ul>
 						</div>
 					</nav>
