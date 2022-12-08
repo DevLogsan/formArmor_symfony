@@ -35,16 +35,16 @@
 							<ul class="nav navbar-nav">
 								<li id='menu1'><a href="{{ path('accueil') }}">Accueil</a></li>
 								<li id='menu2'><a href="{{ path('formation') }}">Formations</a></li>
-                                                                {% if is_granted("ROLE_ADMIN") %}
-                                                                <li id='menu1'><a href="{{ path('adminStatutListe') }}">Statut</a></li>
-						                <li id='menu2'><a href="{{ path('adminClientListe') }}">Client</a></li>
-						                <li id='menu3'><a href="{{ path('adminFormationListe') }}">Formation</a></li>
-						                <li id='menu4'><a href="{{ path('adminSessionListe') }}">Session</a></li>
-						                <li id='menu5'><a href="{{ path('adminPlanListe') }}">Plan de formation</a></li>
-                                                                {% endif %}
+								{% if is_granted("ROLE_ADMIN") %}
+								<li id='menu1'><a href="{{ path('adminStatutListe') }}">Statut</a></li>
+								<li id='menu2'><a href="{{ path('adminClientListe') }}">Client</a></li>
+								<li id='menu3'><a href="{{ path('adminFormationListe') }}">Formation</a></li>
+								<li id='menu4'><a href="{{ path('adminSessionListe') }}">Session</a></li>
+								<li id='menu5'><a href="{{ path('adminPlanListe') }}">Plan de formation</a></li>
+								{% endif %}
 								<li id='menu4'><a href="{{ path('login_client') }}">Connexion client</a></li>
 								<li id='menu5'><a href="{{ path('login_administrateur') }}">Connexion administrateur</a></li>
-                                                                <li>{% if app.user %}Vous êtes connecté en tant que {{ app.user.username }}, <br><a href="{{ path('deconnexion') }}">Déconnexion</a>{% endif %}</li>
+								<li>{% if app.user %}Vous êtes connecté en tant que {{ app.user.username }}, <br><a href="{{ path('deconnexion') }}">Déconnexion</a>{% endif %}</li>
 							</ul>
 						</div>
 					</nav>
