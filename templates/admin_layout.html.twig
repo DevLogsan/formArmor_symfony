@@ -32,14 +32,7 @@
 						<div class="navbar-header">
 						  <a class="navbar-brand" href="#">FormArmor</a>
 						</div>
-						<ul class="nav navbar-nav">
-						  <li id='menu1'><a href="{{ path('adminStatutListe') }}">Statut</a></li>
-						  <li id='menu2'><a href="{{ path('adminClientListe') }}">Client</a></li>
-						  <li id='menu3'><a href="{{ path('adminFormationListe') }}">Formation</a></li>
-						  <li id='menu4'><a href="{{ path('adminSessionListe') }}">Session</a></li>
-						  <li id='menu5'><a href="{{ path('adminPlanListe') }}">Plan de formation</a></li>
-						  <li>{% if app.user %}Vous êtes connecté en tant que {{ app.user.username }}, <br><a href="{{ path('deconnexion') }}">Déconnexion</a>{% endif %}</li>
-						</ul>
+					
 					  </div>
 					</nav>
 				</div>
