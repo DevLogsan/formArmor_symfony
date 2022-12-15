@@ -39,7 +39,7 @@ class SecurityController extends AbstractController
 {
     /**
      * @Route("/login", name="login_administrateur")
-	 * 
+	 *
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
@@ -65,7 +65,7 @@ class SecurityController extends AbstractController
 
     /**
      * @Route("/security/statut/liste", name="adminStatutListe")
-	 * 
+	 *
 	 * @Security("is_granted('ROLE_ADMIN')")
      */
 	// Gestion des statuts
@@ -85,7 +85,7 @@ class SecurityController extends AbstractController
     }
     /**
      * @Route("/security/statut/modif/{id}", name="adminStatutModif")
-	 * 
+	 *
 	 * @Security("is_granted('ROLE_ADMIN')")
      */
 	// Affichage du formulaire de modification d'un statut
@@ -126,7 +126,7 @@ class SecurityController extends AbstractController
     }
     /**
      * @Route("/security/statut/supp/{id}", name="adminStatutSupp")
-	 * 
+	 *
 	 * @Security("is_granted('ROLE_ADMIN')")
      */
 	public function suppStatut($id, Request $request, PaginatorInterface $paginator) // Affichage du formulaire de suppression d'un statut
