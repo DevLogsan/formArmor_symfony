@@ -49,8 +49,6 @@ class ClientRepository extends ServiceEntityRepository
 	
 	public function verifMDP($nom, $mdp) // Controle du nom et du mot de passe
 	{
-		echo $nom;
-		echo $mdp;
 		$qb = $this->createQueryBuilder('c');
 		$qb->select('COUNT(c)');
 		$qb->andWhere('c.nom = :nom AND c.password = :mdp')->setParameter('nom', $nom)->setParameter('mdp', $mdp);

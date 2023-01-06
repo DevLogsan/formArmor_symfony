@@ -29,22 +29,33 @@
 				<div class="col-md-12">
 					<nav class="navbar navbar-inverse">
 						<div class="container-fluid">
-						<div class="navbar-header">
-							<a class="navbar-brand" href="#">FormArmor</a>
-						</div>
+							<div class="navbar-header">
+								<a class="navbar-brand" href="#">FormArmor</a>
+							</div>
 							<ul class="nav navbar-nav">
-								<li id='menu1'><a href="{{ path('accueil') }}">Accueil</a></li>
-								<li id='menu2'><a href="{{ path('formation') }}">Formations</a></li>
+								<li class="active"><a href="#">Accueil</a></li>
 								{% if is_granted("ROLE_ADMIN") %}
-								<li id='menu1'><a href="{{ path('adminStatutListe') }}">Statut</a></li>
-								<li id='menu2'><a href="{{ path('adminClientListe') }}">Client</a></li>
-								<li id='menu3'><a href="{{ path('adminFormationListe') }}">Formation</a></li>
-								<li id='menu4'><a href="{{ path('adminSessionListe') }}">Session</a></li>
-								<li id='menu5'><a href="{{ path('adminPlanListe') }}">Plan de formation</a></li>
-								{% endif %}
-								<li id='menu4'><a href="{{ path('login_client') }}">Connexion client</a></li>
-								<li id='menu5'><a href="{{ path('login_administrateur') }}">Connexion administrateur</a></li>
-								<li>{% if app.user %}Vous êtes connecté en tant que {{ app.user.username }}, <br><a href="{{ path('deconnexion') }}">Déconnexion</a>{% endif %}</li>
+								<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Administration <span class="caret"></span></a>
+									<ul class="dropdown-menu">
+									<li><a href="{{ path('adminStatutListe') }}">Statut</a></li>
+									<li><a href="{{ path('adminClientListe') }}">Client</a></li>
+									<li><a href="{{ path('adminFormationListe') }}">Formation</a></li>
+									<li><a href="{{ path('adminSessionListe') }}">Session</a></li>
+									<li><a href="{{ path('adminPlanListe') }}">Plan de formation</a></li>
+								</ul>
+							</li>
+							{% endif %}
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+							{% if is_granted("ROLE_ADMIN") %}
+							{% else %}
+								<li><a href="{{ path('login_client') }}">Connexion client</a></li>
+								<li><a href="{{ path('login_administrateur') }}">Connexion administrateur</a></li>
+							{% endif %}
+							{% if app.user %}
+								<li id='menu6'><a style="color: red; font-weight: bold;" href="#" class="nav navbar-nav navbar-right">{{ app.user.username }}</a></li>
+								<li id='menu7'><a href="{{ path('deconnexion') }}">Déconnexion</a></li>
+							{% endif %}
 							</ul>
 						</div>
 					</nav>
