@@ -20,13 +20,7 @@
 	
 	{% block body %}
 		{# Ici on va définir une banniere et un menu commun à toutes les pages du Bunble FormArmor #}
-			<div class="row">
-				<div class="col-md-12"> 
-					<img src="{{ asset('images/banniere.jpg') }}" class="img-responsive" />
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">
+				<img src="{{ asset('images/banniere.jpg') }}" class="img-responsive" />
 					<nav class="navbar navbar-inverse">
 						<div class="container-fluid">
 							<div class="navbar-header">
@@ -59,10 +53,8 @@
 							</ul>
 						</div>
 					</nav>
-				</div>
-			</div>
+
 			<div class="row">
-				
 				<div class="col-md-1">
 				</div>
 				<div class="col-md-8">
@@ -71,23 +63,23 @@
 						
 					{% endblock %}
 				</div>
-				<div class="col-md-3">
+				<div style='text-align: center' class="col-md-3">
 					  <h4>FormArmor c'est :</h4>
 					  <div class="list-group">
-						<a href="#" class="list-group-item">
-						  <h4 class="list-group-item-heading">Des personnes à votre service</h4>
+						<a style="background-color: #B8C7E2; border: 0px" href="#" class="list-group-item">
+						  <h4 style="color: #1C256A" class="list-group-item-heading">Des personnes à votre service</h4>
 						  <p class="list-group-item-text">4 conseillers en formation continue</p>
 						</a>
-						<a href="#" class="list-group-item">
-						  <h4 class="list-group-item-heading">Une implantation sur tout le territoire</h4>
+						<a style="background-color: #B8C7E2; border: 0px" href="#" class="list-group-item">
+						  <h4 style="color: #1C256A" class="list-group-item-heading">Une implantation sur tout le territoire</h4>
 						  <p class="list-group-item-text">25 établissements adhérents</p>
 						</a>
-						<a href="#" class="list-group-item">
-						  <h4 class="list-group-item-heading">Un savoir faire incomparable</h4>
+						<a style="background-color: #B8C7E2; border: 0px" href="#" class="list-group-item">
+						  <h4 style="color: #1C256A" class="list-group-item-heading">Un savoir faire incomparable</h4>
 						  <p class="list-group-item-text">2000 stagiaires formés chaque année</p>
 						</a>
 					  </div>
-						<img src="{{ asset('images/carte_Formarmor.jpg') }}" class="img-responsive" />
+					<img src="{{ asset('images/carte_Formarmor.jpg') }}" class="img-responsive" />
 				</div>
 			</div>
 	{% endblock %}

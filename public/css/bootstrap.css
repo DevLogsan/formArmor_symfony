@@ -9,6 +9,11 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+
+* {
+  background-color: #B8C7E2;
+}
+
 body {
   margin: 0;
 }
@@ -43,7 +48,7 @@ template {
   display: none;
 }
 a {
-  background-color: transparent;
+  background-color: #B8C7E2;
 }
 a:active,
 a:hover {
